@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Movie Review Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a movie review website built using React.js and Node.js. It allows users to browse a collection of movies, watch trailers, and read and submit reviews for movies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse Movies: The website displays a collection of movies fetched from the server. Users can view movie details such as title, poster, and release date.
 
-### `npm start`
+- Watch Trailers: Users can click on a movie to watch its trailer. The website provides a route for playing trailers using the YouTube API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Submit Reviews: Users can submit reviews for movies. The website includes a form where users can write their reviews and submit them. The reviews are sent to the server and stored in a MongoDB database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Display Reviews: The website displays the existing reviews for a selected movie. The reviews are fetched from the server and rendered on the webpage. Users can see the review bodies and read other users' opinions.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project structure is as follows:
 
-### `npm run build`
+- `App.js`: The main component that serves as the entry point of the application. It handles routing and manages the state of movies and reviews.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `components/Layout.js`: A layout component that provides a consistent layout for the website. It includes the header and wraps the main content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `components/home/Home.js`: The homepage component that displays a list of movies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `components/header/Header.js`: The header component that contains the website title and navigation links.
 
-### `npm run eject`
+- `components/trailer/Trailer.js`: The component responsible for playing movie trailers.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `components/reviews/Reviews.js`: The component that displays movie reviews and provides a form for submitting new reviews.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `components/hero/Hero.js`: The component that displays a carousel of movies and allows users to view trailers and access reviews. It also includes the Hero.css file for styling.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `api/axiosConfig.js`: The Axios configuration file that sets up the base URL for making API requests.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React.js: A JavaScript library for building user interfaces.
+- Node.js: A JavaScript runtime for running server-side code.
+- MongoDB: A NoSQL database for storing movie reviews.
+- Axios: A library for making HTTP requests from the client.
+- React Router: A routing library for navigation within the application.
